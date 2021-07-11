@@ -57,26 +57,6 @@ body {
     p {
       font-size: 1.1em;
     }
-    input {
-      padding:1.6em 5.8em 1.6em 1.5em;
-      border-radius: 3.1em 0 0 3.1em;
-      font-size: 1.1em;
-      border: 1px solid $bg-grey;
-    }
-    button {
-      outline: none;
-      background-color: $btn-blue;
-      padding:1.7em 5.6em 1.5em 1.6em;
-      color: white;
-      font-size: 1.1em;
-      border-radius: 0 3.1em 3.1em 0;
-      border: none;
-      position: absolute;
-      cursor: pointer;
-    //   img {
-    //   
-    // }
-    }
     span {
         font-size: 0.9em;
         color:$bg-grey;
@@ -197,23 +177,6 @@ body {
   h1 {
     font-size: 4em;
   }
-  input {
-    padding:1.6em 5.8em 1.6em 1.5em;
-    border-radius: 3.1em 0 0 3.1em;
-    font-size: 1.1em;
-    border: 1px solid $bg-grey;
-  }
-  button {
-    outline: none;
-    background-color: $btn-blue;
-    padding:1.7em 5.6em 1.5em 1.6em;
-    color: white;
-    font-size: 1.1em;
-    border-radius: 0 3.1em 3.1em 0;
-    border: none;
-    // position: absolute;
-    cursor: pointer;
-  }
   span {
     font-size: 0.9em;
     color:$bg-grey;
@@ -300,31 +263,9 @@ body {
   display: flex;
   justify-content: space-around;
   &__info {
-    // display: flex;
-    // flex-direction: column;
     align-items: center;
     h2 {
       font-size: 3.2em;
-    }
-    input {
-      padding:1.6em 5.8em 1.6em 1.5em;
-      border-radius: 3.1em 0 0 3.1em;
-      font-size: 1.1em;
-      border: 1px solid $bg-grey;
-    }
-    button {
-      outline: none;
-      background-color: $btn-blue;
-      padding:1.7em 5.6em 1.5em 1.6em;
-      color: white;
-      font-size: 1.1em;
-      border-radius: 0 3.1em 3.1em 0;
-      border: none;
-      position: absolute;
-      cursor: pointer;
-    //   img {
-    //   
-    // }
     }
     span {
         font-size: 0.9em;
@@ -365,27 +306,120 @@ body {
     gap:2em;
   }
 }
+.mainForm {
+    display: flex;
+    align-items: stretch;
+  input {
+    padding:1em;
+    border-radius: 999rem 0 0 999rem;
+    font-size: 1.1em;
+    border: 1px solid $bg-grey;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    outline: none;
+    background-color: $btn-blue;
+    padding:1em;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 0 999rem 999rem 0;
+    border: none;
+    cursor: pointer;
+  }
+}
 @media (max-width:576px ) {
+  .container {
+    // padding:0 em;
+  }
   body {
     font-size: 12px;
   }
   .description {
     flex-direction: column-reverse;
+    
     img {
       width: 100%;
     }
-  }
-  .phoneBlock {
-    flex-direction: column;
-  }
-  .featured {
-  &__companies {
-    img {
-      width: 100%;
+    &__title {
+      align-items: center;
+      text-align: center;
+      button {
+       
       }
     }
   }
+  .featured {
+    margin-top: 0;
+    text-align: center;
+  &__companies {
+    flex-direction: column;    
+    }
+    .phoneBlock {
+      flex-direction: column;
+      gap:0!important;
+      &__firstblock {
+        h5 {
+          text-align: center;
+        }
+      }
+  }
+}
   .trackers {
-    
+    section:first-child {
+      display: none;
+    }
+    &__info {
+      margin:0 auto;
+    }
+  }
+  .result {
+    section:last-child {
+      display: none;
+    }
+    &__info {
+      margin: 0 auto;
+      
+    }
+  }
+  .creaters {
+    flex-direction: column;
+    &__info {
+      grid-template-columns: 1fr;
+      margin:0 auto;
+      margin-top: 5em;
+    }
+    &__title {
+      margin:0 auto;
+    }
+  }
+  .review {
+    &__blocks {
+      flex-direction: column;
+    }
+  }
+  .end {
+    flex-direction: column;
+    margin:0 auto;
+    &__info {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    section:last-child {
+      display: none;
+    }
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    &__rightspot {
+      align-items: center;
+      margin-top: 2em;
+      span {
+        display: none;
+      }
+    }
   }
 }
